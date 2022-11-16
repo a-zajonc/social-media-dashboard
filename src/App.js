@@ -1,10 +1,10 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import { Box } from "@chakra-ui/react";
+import { DashboardComponent } from "./components";
 
 function App() {
   return (
     <ChakraProvider>
-      <Box></Box>
+      <DashboardComponent />
     </ChakraProvider>
   );
 }
