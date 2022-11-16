@@ -5,7 +5,12 @@ import { OverviewDisplay } from "./OverviewDisplay";
 
 export function DashboardComponent() {
   return (
-    <Box>
+    <Box
+      h="100%"
+      display="flex"
+      flexDirection="column"
+      justifyContent="space-around"
+    >
       <Box display="flex" flexDirection="row" justifyContent="space-between">
         <Box display="flex" flexDirection="column">
           <Text fontWeight="700" fontSize="24px" color="white">
