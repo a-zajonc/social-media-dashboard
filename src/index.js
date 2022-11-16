@@ -4,12 +4,33 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { extendTheme } from "@chakra-ui/react";
+import { switchAnatomy } from "@chakra-ui/anatomy";
+import { createMultiStyleConfigHelpers } from "@chakra-ui/react";
+
+const { definePartsStyle, defineMultiStyleConfig } =
+  createMultiStyleConfigHelpers(switchAnatomy.keys);
+
+const baseStyle = definePartsStyle({
+  container: {},
+  thumb: {
+    bg: "#1E202A",
+  },
+  track: {
+    bgGradient: "linear(to-r, #378FE6, #3EDA82)",
+    _checked: {
+      bg: "linear(to-r, #378FE6, #3EDA82)",
+    },
+  },
+});
+
+export const switchTheme = defineMultiStyleConfig({ baseStyle });
 
 export const theme = extendTheme({
   fonts: {
     heading: `Inter`,
     body: `Inter`,
   },
+  components: { Switch: switchTheme },
 });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
