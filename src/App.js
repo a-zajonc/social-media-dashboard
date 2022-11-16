@@ -5,7 +5,12 @@ import { theme } from ".";
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box backgroundColor="#1E202A" h="100vh">
+      <Box
+        backgroundColor="#1E202A"
+        h="100vh"
+        paddingInline="15%"
+        paddingBlock="5%"
+      >
         <DashboardComponent />
       </Box>
     </ChakraProvider>
