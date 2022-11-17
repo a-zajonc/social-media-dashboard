@@ -2,6 +2,7 @@ import * as React from "react";
 import { ChakraProvider, Box } from "@chakra-ui/react";
 import { DashboardComponent } from "./components";
 import { theme } from ".";
+import { UserData } from "./context";
 
 const getFeed = async () => {
   const response = await fetch("http://localhost:3001/feed");
@@ -21,7 +22,6 @@ function App() {
     resolveFeed();
   }, []);
 
-  console.log("dupa");
   return (
     <ChakraProvider theme={theme}>
       <Box
@@ -30,7 +30,9 @@ function App() {
         paddingInline="15%"
         paddingBlock="5%"
       >
-        <DashboardComponent />
+        <UserData.Provider value={feed}>
+          <DashboardComponent />
+        </UserData.Provider>
       </Box>
     </ChakraProvider>
   );

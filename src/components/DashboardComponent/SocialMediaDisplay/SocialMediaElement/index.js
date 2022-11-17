@@ -23,18 +23,23 @@ export function SocialMediaElement({
       />
       <Box
         h="100%"
+        marginBottom="10px"
         display="flex"
         flexDirection="column"
         alignItems="center"
-        justifyContent="space-around"
+        justifyContent="space-evenly"
       >
         <Box display="flex" flexDirection="row">
           <Image src={icon} h="100%" marginRight="10px" />
-          <Text color="#8B97C6">{accountName}</Text>
+          <Text color="#8B97C6" fontWeight="700">
+            {accountName}
+          </Text>
         </Box>
         <Box display="flex" flexDirection="column" alignItems="center">
-          <Text color="white" fontWeight="700" fontSize="44px">
-            {totalNumber}
+          <Text color="white" fontWeight="700" fontSize="54px">
+            {totalNumber <= 10000
+              ? totalNumber
+              : totalNumber.toString().slice(0, -3).concat("k")}
           </Text>
           <Text color="#8B97C6" textTransform="uppercase" letterSpacing="3px">
             {group}
@@ -49,11 +54,19 @@ export function SocialMediaElement({
           />
           <Text
             color={todayNumber > 0 ? "#1DB489" : "#DC414C"}
+            fontWeight="700"
             marginRight="5px"
+            fontSize="14px"
           >
-            {todayNumber.replace(/\D/g, "")}
+            {Math.abs(todayNumber)}
           </Text>
-          <Text color={todayNumber > 0 ? "#1DB489" : "#DC414C"}>Today</Text>
+          <Text
+            color={todayNumber > 0 ? "#1DB489" : "#DC414C"}
+            fontWeight="700"
+            fontSize="14px"
+          >
+            Today
+          </Text>
         </Box>
       </Box>
     </Box>
