@@ -12,7 +12,12 @@ export function SocialMediaElement({
   todayNumber,
 }) {
   return (
-    <Box bgColor="#252A41" h="250px" borderRadius="10px">
+    <Box
+      bgColor="#252A41"
+      h="250px"
+      borderRadius="10px"
+      _hover={{ bgColor: "#333a56" }}
+    >
       <Box
         bgColor={color}
         bgGradient={bgGradient}
