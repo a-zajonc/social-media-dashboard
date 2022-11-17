@@ -23,12 +23,12 @@ app.get("/feed", (req, res) => {
       vendor: "ig",
       handler: "@nathanf",
       amount: 11223,
-      ranking: 1099,
+      ranking: 99,
     },
     {
       vendor: "yt",
       handler: "Nathan F",
-      amount: 8293,
+      amount: 8239,
       ranking: -144,
     },
   ]);
