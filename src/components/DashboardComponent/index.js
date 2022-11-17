@@ -6,9 +6,9 @@ import { useContext } from "react";
 import { UserData } from "../../context";
 
 export function DashboardComponent() {
-  const data = useContext(UserData);
+  const { feed } = useContext(UserData);
 
-  const followersSum = data.reduce((previousValue, currentValue) => {
+  const followersSum = feed.reduce((previousValue, currentValue) => {
     return previousValue + currentValue.amount;
   }, 0);
 

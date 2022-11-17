@@ -38,11 +38,11 @@ function getColor(vendor) {
 }
 
 export function SocialMediaDisplay() {
-  const data = useContext(UserData);
+  const { feed } = useContext(UserData);
 
   return (
     <Grid templateColumns="repeat(4, 1fr)" gap={7}>
-      {data.map((socialStat, index) => {
+      {feed.map((socialStat, index) => {
         return (
           <SocialMediaElement
             key={index}
@@ -60,30 +60,6 @@ export function SocialMediaDisplay() {
           />
         );
       })}
-      {/* <SocialMediaElement
-        color=
-        group="followers"
-        icon={iconTwitter}
-        accountName="@nathanf"
-        totalNumber="1044"
-        todayNumber="99"
-      />
-      <SocialMediaElement
-
-        group="followers"
-        icon={iconInstagram}
-        accountName="@realnathanf"
-        totalNumber="11k"
-        todayNumber="1099"
-      />
-      <SocialMediaElement
-        color=
-        group="subscribers"
-        icon={iconYouTube}
-        accountName="Nathan F."
-        totalNumber="8239"
-        todayNumber="-144"
-      /> */}
     </Grid>
   );
 }
