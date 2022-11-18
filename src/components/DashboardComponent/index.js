@@ -1,5 +1,5 @@
 import { ThemeMode } from "./ThemeMode";
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, useColorModeValue } from "@chakra-ui/react";
 import { SocialMediaDisplay } from "./SocialMediaDisplay";
 import { OverviewDisplay } from "./OverviewDisplay";
 import { useContext } from "react";
@@ -21,17 +21,28 @@ export function DashboardComponent() {
     >
       <Box display="flex" flexDirection="row" justifyContent="space-between">
         <Box display="flex" flexDirection="column">
-          <Text fontWeight="700" fontSize="24px" color="white">
+          <Text
+            fontWeight="700"
+            fontSize="24px"
+            color={useColorModeValue("white", "#1E202A")}
+          >
             Social Media Dashboard
           </Text>
-          <Text color="#8B97C6" fontWeight="700">
+          <Text
+            color={useColorModeValue("#8B97C6", "#63687E")}
+            fontWeight="700"
+          >
             Total Followers: {followersSum}
           </Text>
         </Box>
         <ThemeMode />
       </Box>
       <SocialMediaDisplay />
-      <Text fontWeight="700" fontSize="20px" color="white">
+      <Text
+        fontWeight="700"
+        fontSize="20px"
+        color={useColorModeValue("white", "#1E202A")}
+      >
         Overview - Today
       </Text>
       <OverviewDisplay />

@@ -1,7 +1,6 @@
 import * as React from "react";
-import { ChakraProvider, Box } from "@chakra-ui/react";
+import { Box, useColorModeValue } from "@chakra-ui/react";
 import { DashboardComponent } from "./components";
-import { theme } from ".";
 import { UserData } from "./context";
 
 const getFeed = async () => {
@@ -31,18 +30,16 @@ function App() {
   }, []);
 
   return (
-    <ChakraProvider theme={theme}>
-      <Box
-        backgroundColor="#1E202A"
-        h="100vh"
-        paddingInline="15%"
-        paddingBlock="5%"
-      >
-        <UserData.Provider value={{ feed, overview }}>
-          <DashboardComponent />
-        </UserData.Provider>
-      </Box>
-    </ChakraProvider>
+    <Box
+      backgroundColor={useColorModeValue("#1E202A", "white")}
+      h="100vh"
+      paddingInline="15%"
+      paddingBlock="5%"
+    >
+      <UserData.Provider value={{ feed, overview }}>
+        <DashboardComponent />
+      </UserData.Provider>
+    </Box>
   );
 }
 
