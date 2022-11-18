@@ -1,11 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { extendTheme } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import { switchAnatomy } from "@chakra-ui/anatomy";
-import { createMultiStyleConfigHelpers } from "@chakra-ui/react";
+import {
+  createMultiStyleConfigHelpers,
+  ColorModeScript,
+  extendTheme,
+} from "@chakra-ui/react";
+
+const config = {
+  initialColorMode: "dark",
+  useSystemColorMode: false,
+};
 
 const { definePartsStyle, defineMultiStyleConfig } =
   createMultiStyleConfigHelpers(switchAnatomy.keys);
@@ -13,12 +21,13 @@ const { definePartsStyle, defineMultiStyleConfig } =
 const baseStyle = definePartsStyle({
   container: {},
   thumb: {
-    bg: "#1E202A",
+    bg: "white",
+    _checked: { bg: "#1E202A" },
   },
   track: {
-    bgGradient: "linear(to-r, #378FE6, #3EDA82)",
+    bg: "#AEB3CB",
     _checked: {
-      bg: "linear(to-r, #378FE6, #3EDA82)",
+      bgGradient: "linear(to-r, #378FE6, #3EDA82)",
     },
   },
 });
@@ -31,12 +40,16 @@ export const theme = extendTheme({
     body: `Inter`,
   },
   components: { Switch: switchTheme },
+  config,
 });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <ChakraProvider theme={theme}>
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+      <App />
+    </ChakraProvider>
   </React.StrictMode>
 );
 
