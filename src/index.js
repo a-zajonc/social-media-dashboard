@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 
 const config = {
-  initialColorMode: "dark",
+  initialColorMode: "light",
   useSystemColorMode: false,
 };
 
@@ -29,6 +29,9 @@ const baseStyle = definePartsStyle({
     _checked: {
       bgGradient: "linear(to-r, #378FE6, #3EDA82)",
     },
+    _hover: {
+      bgGradient: "linear(to-r, #378FE6, #3EDA82)",
+    },
   },
 });
 
@@ -39,8 +42,8 @@ export const theme = extendTheme({
     heading: `Inter`,
     body: `Inter`,
   },
-  components: { Switch: switchTheme },
   config,
+  components: { Switch: switchTheme },
 });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
