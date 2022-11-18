@@ -42,6 +42,7 @@ export function OverviewDisplay() {
             borderRadius="10px"
             h="150px"
             padding="30px"
+            _hover={{ bgColor: "#333a56" }}
           >
             <Box
               display="flex"
