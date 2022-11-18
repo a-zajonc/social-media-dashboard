@@ -1,12 +1,14 @@
 import { ThemeMode } from "./ThemeMode";
-import { Box, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Center, Text, useColorModeValue } from "@chakra-ui/react";
 import { SocialMediaDisplay } from "./SocialMediaDisplay";
 import { OverviewDisplay } from "./OverviewDisplay";
 import { useContext } from "react";
 import { UserData } from "../../context";
+import { PulseLoader } from "react-spinners";
+import { LoaderIcon } from "../../icons/loaderIcon";
 
 export function DashboardComponent() {
-  const { feed } = useContext(UserData);
+  const { feed, overview } = useContext(UserData);
 
   const followersSum = feed.reduce((previousValue, currentValue) => {
     return previousValue + currentValue.amount;
@@ -37,7 +39,13 @@ export function DashboardComponent() {
         </Box>
         <ThemeMode />
       </Box>
-      <SocialMediaDisplay />
+      {feed.length > 0 ? (
+        <SocialMediaDisplay />
+      ) : (
+        <Center>
+          <LoaderIcon />
+        </Center>
+      )}
       <Text
         fontWeight="700"
         fontSize="20px"
@@ -45,7 +53,13 @@ export function DashboardComponent() {
       >
         Overview - Today
       </Text>
-      <OverviewDisplay />
+      {overview.length > 0 ? (
+        <OverviewDisplay />
+      ) : (
+        <Center>
+          <LoaderIcon />
+        </Center>
+      )}
     </Box>
   );
 }
