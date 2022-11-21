@@ -27,8 +27,12 @@ export function OverviewDisplay() {
 
   return (
     <Grid
-      templateRows={{ sm: "repeat(8, 1fr)", lg: "repeat(2, 1fr)" }}
-      templateColumns={{ lg: "repeat(4, 1fr)" }}
+      templateRows={{
+        sm: "repeat(8, 1fr)",
+        md: "repeat(4,1fr)",
+        lg: "repeat(2, 1fr)",
+      }}
+      templateColumns={{ md: "repeat(2, 1fr)", lg: "repeat(4, 1fr)" }}
       gap={4}
     >
       {overview.map((socialStat, index) => {
