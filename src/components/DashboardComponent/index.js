@@ -1,10 +1,16 @@
 import { ThemeMode } from "./ThemeMode";
-import { Box, Center, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Divider,
+  Text,
+  useColorModeValue,
+  Show,
+} from "@chakra-ui/react";
 import { SocialMediaDisplay } from "./SocialMediaDisplay";
 import { OverviewDisplay } from "./OverviewDisplay";
 import { useContext } from "react";
 import { UserData } from "../../context";
-import { PulseLoader } from "react-spinners";
 import { LoaderIcon } from "../../icons/loaderIcon";
 
 export function DashboardComponent() {
@@ -16,13 +22,18 @@ export function DashboardComponent() {
 
   return (
     <Box
-      h="100%"
+      h={{ lg: "100%" }}
       display="flex"
       flexDirection="column"
       justifyContent="space-around"
     >
-      <Box display="flex" flexDirection="row" justifyContent="space-between">
-        <Box display="flex" flexDirection="column">
+      <Box
+        display="flex"
+        flexDirection={{ sm: "column", lg: "row" }}
+        justifyContent="space-between"
+        marginBottom={{ sm: "30px", lg: "10px" }}
+      >
+        <Box display="flex" flexDirection="column" marginBottom="10px">
           <Text
             fontWeight="700"
             fontSize="24px"
@@ -37,6 +48,9 @@ export function DashboardComponent() {
             Total Followers: {followersSum}
           </Text>
         </Box>
+        <Show breakpoint="(max-width: 400px)">
+          <Divider variant="thick" marginBottom="10px" />
+        </Show>
         <ThemeMode />
       </Box>
       {feed.length > 0 ? (

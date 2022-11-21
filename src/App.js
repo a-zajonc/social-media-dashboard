@@ -31,10 +31,9 @@ function App() {
 
   return (
     <Box
-      backgroundColor={useColorModeValue("#1E202A", "white")}
-      h="100vh"
-      paddingInline="15%"
-      paddingBlock="5%"
+      h={{ sm: "100%", lg: "100vh" }}
+      paddingInline={{ sm: "7%", lg: "15%" }}
+      paddingBlock={{ sm: "5%", lg: "5%" }}
     >
       <UserData.Provider value={{ feed, overview }}>
         <DashboardComponent />

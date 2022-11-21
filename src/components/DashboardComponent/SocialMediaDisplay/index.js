@@ -41,7 +41,10 @@ export function SocialMediaDisplay() {
   const { feed } = useContext(UserData);
 
   return (
-    <Grid templateColumns="repeat(4, 1fr)" gap={7}>
+    <Grid
+      templateColumns={{ sm: "repeat(1, 1fr)", lg: "repeat(4, 1fr)" }}
+      gap={7}
+    >
       {feed.map((socialStat, index) => {
         return (
           <SocialMediaElement

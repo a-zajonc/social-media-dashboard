@@ -7,6 +7,8 @@ import { switchAnatomy } from "@chakra-ui/anatomy";
 import {
   createMultiStyleConfigHelpers,
   ColorModeScript,
+  defineStyle,
+  defineStyleConfig,
   extendTheme,
 } from "@chakra-ui/react";
 
@@ -35,15 +37,49 @@ const baseStyle = definePartsStyle({
   },
 });
 
-export const switchTheme = defineMultiStyleConfig({ baseStyle });
+const switchTheme = defineMultiStyleConfig({ baseStyle });
 
-export const theme = extendTheme({
+const thick = defineStyle({
+  borderWidth: "1px",
+  borderStyle: "solid",
+  borderRadius: 20,
+  borderColor: "#8B97C6",
+  _dark: {
+    borderColor: "#252A41",
+  },
+});
+
+const dividerTheme = defineStyleConfig({
+  thick,
+  variants: {
+    thick: thick,
+  },
+});
+
+const breakpoints = {
+  sm: "320px",
+  md: "768px",
+  lg: "960px",
+  xl: "1200px",
+  "2xl": "1536px",
+};
+
+const theme = extendTheme({
+  styles: {
+    global: {
+      body: {
+        bg: "#1E202A",
+        _dark: { bg: "white" },
+      },
+    },
+  },
   fonts: {
     heading: `Inter`,
     body: `Inter`,
   },
   config,
-  components: { Switch: switchTheme },
+  components: { Switch: switchTheme, Divider: dividerTheme },
+  breakpoints,
 });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
