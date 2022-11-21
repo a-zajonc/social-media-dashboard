@@ -58,9 +58,9 @@ const dividerTheme = defineStyleConfig({
 
 const breakpoints = {
   sm: "320px",
-  md: "768px",
-  lg: "960px",
-  xl: "1200px",
+  md: "651px",
+  lg: "1100px",
+  xl: "1250px",
   "2xl": "1536px",
 };
 

@@ -21,12 +21,7 @@ export function DashboardComponent() {
   }, 0);
 
   return (
-    <Box
-      h={{ lg: "100%" }}
-      display="flex"
-      flexDirection="column"
-      justifyContent="space-around"
-    >
+    <Box display="flex" flexDirection="column" justifyContent="space-around">
       <Box
         display="flex"
         flexDirection={{ sm: "column", lg: "row" }}
@@ -48,7 +43,7 @@ export function DashboardComponent() {
             Total Followers: {followersSum}
           </Text>
         </Box>
-        <Show breakpoint="(max-width: 400px)">
+        <Show breakpoint="(max-width: 959px)">
           <Divider variant="thick" marginBottom="10px" />
         </Show>
         <ThemeMode />
@@ -64,6 +59,7 @@ export function DashboardComponent() {
         fontWeight="700"
         fontSize="20px"
         color={useColorModeValue("white", "#1E202A")}
+        marginBlock="30px"
       >
         Overview - Today
       </Text>

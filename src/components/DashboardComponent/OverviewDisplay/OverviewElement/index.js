@@ -15,7 +15,11 @@ export function OverviewElement({ label, icon, amount, ranking }) {
       _hover={{ bgColor: useColorModeValue("#333a56", "#F0F2FA") }}
     >
       <Box display="flex" flexDirection="row" justifyContent="space-between">
-        <Text color={useColorModeValue("#8B97C6", "#63687E")} fontWeight="700">
+        <Text
+          color={useColorModeValue("#8B97C6", "#63687E")}
+          fontWeight="700"
+          fontSize={{ base: "18px", lg: "13px", xl: "15px" }}
+        >
           {label}
         </Text>
         <Image src={icon} h="100%" />
@@ -23,7 +27,7 @@ export function OverviewElement({ label, icon, amount, ranking }) {
       <Box display="flex" flexDirection="row" justifyContent="space-between">
         <Text
           color={useColorModeValue("white", "#1E202A")}
-          fontSize="30px"
+          fontSize={{ base: "30px", lg: "25px", xl: "30px" }}
           fontWeight="700"
         >
           {amount <= 10000
@@ -37,7 +41,11 @@ export function OverviewElement({ label, icon, amount, ranking }) {
             height="4px"
             marginRight="2px"
           />
-          <Text color={ranking > 0 ? "#1DB489" : "#DC414C"} fontWeight="700">
+          <Text
+            color={ranking > 0 ? "#1DB489" : "#DC414C"}
+            fontWeight="700"
+            fontSize={{ base: "20px", lg: "12px", xl: "15px" }}
+          >
             {Math.abs(ranking)}%
           </Text>
         </Box>

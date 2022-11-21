@@ -9,7 +9,7 @@ export function ThemeMode() {
       display="flex"
       flexDirection="row"
       alignItems="center"
-      justifyContent={{ sm: "space-between" }}
+      justifyContent={{ sm: "space-between", md: "flex-end" }}
     >
       <Text
         fontSize="16px"

@@ -31,7 +31,6 @@ function App() {
 
   return (
     <Box
-      h={{ sm: "100%", lg: "100vh" }}
       paddingInline={{ sm: "7%", lg: "15%" }}
       paddingBlock={{ sm: "5%", lg: "5%" }}
     >

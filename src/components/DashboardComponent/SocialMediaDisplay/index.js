@@ -42,7 +42,12 @@ export function SocialMediaDisplay() {
 
   return (
     <Grid
-      templateColumns={{ sm: "repeat(1, 1fr)", lg: "repeat(4, 1fr)" }}
+      templateColumns={{
+        sm: "repeat(1, 1fr)",
+        md: "repeat(2, 1fr)",
+        lg: "repeat(4, 1fr)",
+      }}
+      // templateRows={{ lg: "repeat(0,1fr" }}
       gap={7}
     >
       {feed.map((socialStat, index) => {
