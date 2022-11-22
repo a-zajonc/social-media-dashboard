@@ -31,12 +31,19 @@ function App() {
 
   return (
     <Box
-      paddingInline={{ sm: "7%", lg: "15%" }}
-      paddingBlock={{ sm: "5%", lg: "5%" }}
+      bgColor={useColorModeValue("#1F212E", "#f8f9fe")}
+      h="300px"
+      position="relative"
+      borderBottomRadius="20px"
     >
-      <UserData.Provider value={{ feed, overview }}>
-        <DashboardComponent />
-      </UserData.Provider>
+      <Box
+        paddingInline={{ sm: "7%", lg: "15%" }}
+        paddingBlock={{ sm: "5%", lg: "3%" }}
+      >
+        <UserData.Provider value={{ feed, overview }}>
+          <DashboardComponent />
+        </UserData.Provider>
+      </Box>
     </Box>
   );
 }

@@ -31,7 +31,7 @@ export function DashboardComponent() {
         <Box display="flex" flexDirection="column" marginBottom="10px">
           <Text
             fontWeight="700"
-            fontSize="24px"
+            fontSize="30px"
             color={useColorModeValue("white", "#1E202A")}
           >
             Social Media Dashboard
