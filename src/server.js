@@ -39,7 +39,7 @@ app.get("/overview", (req, res) => {
     {
       vendor: "fb",
       label: "Page Views",
-      amount: 87,
+      amount: 87000,
       ranking: 3,
     },
     {
