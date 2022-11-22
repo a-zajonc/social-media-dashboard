@@ -13,7 +13,7 @@ export function ThemeMode() {
     >
       <Text
         fontSize="16px"
-        color={{ sm: useColorModeValue("#8B97C6", "#63687E"), lg: "#8B97C6" }}
+        color={{ sm: useColorModeValue("#63687E", "#8B97C6"), lg: "#8B97C6" }}
         fontWeight="700"
         marginRight="10px"
       >
@@ -22,7 +22,7 @@ export function ThemeMode() {
       <Switch
         size="lg"
         onChange={toggleColorMode}
-        isChecked={colorMode === "light"}
+        isChecked={colorMode === "dark"}
       />
     </Box>
   );

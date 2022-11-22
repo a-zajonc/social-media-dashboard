@@ -31,7 +31,7 @@ function App() {
 
   return (
     <Box
-      bgColor={useColorModeValue("#1F212E", "#f8f9fe")}
+      bgColor={useColorModeValue("#f8f9fe", "#1F212E")}
       h="300px"
       position="relative"
       borderBottomRadius="20px"

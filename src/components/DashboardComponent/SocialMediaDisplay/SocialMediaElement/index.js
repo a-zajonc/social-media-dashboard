@@ -13,10 +13,10 @@ export function SocialMediaElement({
 }) {
   return (
     <Box
-      bgColor={useColorModeValue("#252A41", "#F5F7FF")}
+      bgColor={useColorModeValue("#F5F7FF", "#252A41")}
       h="250px"
       borderRadius="10px"
-      _hover={{ bgColor: useColorModeValue("#333a56", "#F0F2FA") }}
+      _hover={{ bgColor: useColorModeValue("#F0F2FA", "#333a56") }}
     >
       <Box
         bgColor={color}
@@ -42,7 +42,7 @@ export function SocialMediaElement({
         </Box>
         <Box display="flex" flexDirection="column" alignItems="center">
           <Text
-            color={useColorModeValue("white", "#1E202A")}
+            color={useColorModeValue("#1E202A", "white")}
             fontWeight="700"
             fontSize="54px"
           >
@@ -51,7 +51,7 @@ export function SocialMediaElement({
               : totalNumber.toString().slice(0, -3).concat("k")}
           </Text>
           <Text
-            color={useColorModeValue("#8B97C6", "#63687E")}
+            color={useColorModeValue("#63687E", "#8B97C6")}
             textTransform="uppercase"
             letterSpacing="3px"
           >

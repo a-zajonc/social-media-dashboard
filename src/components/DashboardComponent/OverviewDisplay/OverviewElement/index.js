@@ -8,15 +8,15 @@ export function OverviewElement({ label, icon, amount, ranking }) {
       display="flex"
       flexDirection="column"
       justifyContent="space-between"
-      bgColor={useColorModeValue("#252A41", "#F5F7FF")}
+      bgColor={useColorModeValue("#F5F7FF", "#252A41")}
       borderRadius="10px"
       h="150px"
       padding="30px"
-      _hover={{ bgColor: useColorModeValue("#333a56", "#F0F2FA") }}
+      _hover={{ bgColor: useColorModeValue("#F0F2FA", "#333a56") }}
     >
       <Box display="flex" flexDirection="row" justifyContent="space-between">
         <Text
-          color={useColorModeValue("#8B97C6", "#63687E")}
+          color={useColorModeValue("#63687E", "#8B97C6")}
           fontWeight="700"
           fontSize={{ base: "18px", lg: "13px", xl: "15px" }}
         >
@@ -26,7 +26,7 @@ export function OverviewElement({ label, icon, amount, ranking }) {
       </Box>
       <Box display="flex" flexDirection="row" justifyContent="space-between">
         <Text
-          color={useColorModeValue("white", "#1E202A")}
+          color={useColorModeValue("#1E202A", "white")}
           fontSize={{ base: "30px", lg: "25px", xl: "30px" }}
           fontWeight="700"
         >
@@ -42,7 +42,7 @@ export function OverviewElement({ label, icon, amount, ranking }) {
             marginRight="2px"
           />
           <Text
-            color={ranking > 0 ? "#1DB489" : "#DC414C"}
+            color={ranking > 0 ? "#DC414C" : "#1DB489"}
             fontWeight="700"
             fontSize={{ base: "20px", lg: "12px", xl: "15px" }}
           >
