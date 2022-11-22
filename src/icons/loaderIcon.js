@@ -4,7 +4,7 @@ import { useColorModeValue } from "@chakra-ui/react";
 export function LoaderIcon() {
   return (
     <PulseLoader
-      color={useColorModeValue("white", "#1E202A")}
+      color={useColorModeValue("#1E202A", "white")}
       margin="10px"
       size="20px"
     />

@@ -32,12 +32,12 @@ export function DashboardComponent() {
           <Text
             fontWeight="700"
             fontSize="30px"
-            color={useColorModeValue("white", "#1E202A")}
+            color={useColorModeValue("#1E202A", "white")}
           >
             Social Media Dashboard
           </Text>
           <Text
-            color={useColorModeValue("#8B97C6", "#63687E")}
+            color={useColorModeValue("#63687E", "#8B97C6")}
             fontWeight="700"
           >
             Total Followers: {followersSum}
@@ -58,7 +58,7 @@ export function DashboardComponent() {
       <Text
         fontWeight="700"
         fontSize="20px"
-        color={useColorModeValue("white", "#1E202A")}
+        color={useColorModeValue("#1E202A", "white")}
         marginBlock="30px"
       >
         Overview - Today
