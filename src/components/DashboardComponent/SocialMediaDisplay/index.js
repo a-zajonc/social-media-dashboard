@@ -47,7 +47,6 @@ export function SocialMediaDisplay() {
         md: "repeat(2, 1fr)",
         lg: "repeat(4, 1fr)",
       }}
-      // templateRows={{ lg: "repeat(0,1fr" }}
       gap={7}
     >
       {feed.map((socialStat, index) => {
