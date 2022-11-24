@@ -8,17 +8,16 @@ import { useContext } from "react";
 import { OverviewElement } from "./OverviewElement";
 
 function getIcon(vendor) {
-  if (vendor === "fb") {
-    return iconFacebook;
-  }
-  if (vendor === "twitter") {
-    return iconTwitter;
-  }
-  if (vendor === "ig") {
-    return iconInstagram;
-  }
-  if (vendor === "yt") {
-    return iconYouTube;
+  switch (vendor) {
+    case "fb":
+      return iconFacebook;
+    case "twitter":
+      return iconTwitter;
+    case "ig":
+      return iconInstagram;
+    case "yt":
+      return iconYouTube;
+    default:
   }
 }
 
