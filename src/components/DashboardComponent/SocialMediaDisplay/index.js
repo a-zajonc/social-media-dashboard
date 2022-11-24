@@ -8,32 +8,28 @@ import { useContext } from "react";
 import { UserData } from "../../../context";
 
 function getIcon(vendor) {
-  if (vendor === "fb") {
-    return iconFacebook;
-  }
-  if (vendor === "twitter") {
-    return iconTwitter;
-  }
-  if (vendor === "ig") {
-    return iconInstagram;
-  }
-  if (vendor === "yt") {
-    return iconYouTube;
+  switch (vendor) {
+    case "fb":
+      return iconFacebook;
+    case "twitter":
+      return iconTwitter;
+    case "ig":
+      return iconInstagram;
+    case "yt":
+      return iconYouTube;
+    default:
   }
 }
 
 function getColor(vendor) {
-  if (vendor === "fb") {
-    return "#198FF5";
-  }
-  if (vendor === "twitter") {
-    return "#1CA0F2";
-  }
-  if (vendor === "ig") {
-    return null;
-  }
-  if (vendor === "yt") {
-    return "#C4032A";
+  switch (vendor) {
+    case "fb":
+      return "#198FF5";
+    case "twitter":
+      return "#1CA0F2";
+    case "yt":
+      return "#C4032A";
+    default:
   }
 }
 
