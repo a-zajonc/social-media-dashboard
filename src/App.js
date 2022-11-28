@@ -4,13 +4,13 @@ import { DashboardComponent } from "./components";
 import { UserData } from "./context";
 
 const getFeed = async () => {
-  const response = await fetch("http://localhost:3001/feed");
+  const response = await fetch("/api/feed");
 
   return response.json();
 };
 
 const getOverview = async () => {
-  const response = await fetch("http://localhost:3001/overview");
+  const response = await fetch("/api/overview");
 
   return response.json();
 };
