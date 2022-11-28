@@ -5,7 +5,7 @@ const app = express();
 app.set("port", process.env.PORT || 8081);
 // app.use(cors());
 
-app.get("/feed", (req, res) => {
+app.get("/api/feed", (req, res) => {
   res.json([
     {
       vendor: "fb",
@@ -34,7 +34,7 @@ app.get("/feed", (req, res) => {
   ]);
 });
 
-app.get("/overview", (req, res) => {
+app.get("/api/overview", (req, res) => {
   res.json([
     {
       vendor: "fb",
@@ -87,8 +87,8 @@ app.get("/overview", (req, res) => {
   ]);
 });
 
-module.exports = app;
-
 app.listen(app.get("port"), function () {
   console.log("App is running on port", app.get("port"));
 });
+
+module.exports = app;
