@@ -22,7 +22,7 @@ export function OverviewElement({ label, icon, amount, ranking }) {
         >
           {label}
         </Text>
-        <Image src={icon} h="100%" />
+        <Image src={icon} h="100%" alt="Social media icon" />
       </Box>
       <Box display="flex" flexDirection="row" justifyContent="space-between">
         <Text
@@ -40,6 +40,7 @@ export function OverviewElement({ label, icon, amount, ranking }) {
             width="8px"
             height="4px"
             marginRight="2px"
+            alt={ranking > 0 ? "Arrow Down Icon" : "Arrow Up Icon"}
           />
           <Text
             color={ranking > 0 ? "#DC414C" : "#1DB489"}

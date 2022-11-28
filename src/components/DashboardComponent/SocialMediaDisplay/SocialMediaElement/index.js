@@ -35,7 +35,12 @@ export function SocialMediaElement({
         justifyContent="space-evenly"
       >
         <Box display="flex" flexDirection="row">
-          <Image src={icon} h="100%" marginRight="10px" />
+          <Image
+            src={icon}
+            h="100%"
+            marginRight="10px"
+            alt="Social Media Icon"
+          />
           <Text color="#8B97C6" fontWeight="700">
             {accountName}
           </Text>
@@ -64,6 +69,7 @@ export function SocialMediaElement({
             width="8px"
             height="4px"
             marginRight="5px"
+            alt={todayNumber > 0 ? "Arrow Up Icon" : "Arrow Down Icon"}
           />
           <Text
             color={todayNumber > 0 ? "#1DB489" : "#DC414C"}
