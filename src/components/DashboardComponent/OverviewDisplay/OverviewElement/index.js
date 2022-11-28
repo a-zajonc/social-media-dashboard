@@ -36,7 +36,7 @@ export function OverviewElement({ label, icon, amount, ranking }) {
         </Text>
         <Box display="flex" flexDirection="row" alignItems="center">
           <Image
-            src={ranking > 0 ? iconUp : iconDown}
+            src={ranking > 0 ? iconDown : iconUp}
             width="8px"
             height="4px"
             marginRight="2px"
