@@ -20,13 +20,15 @@ function App() {
   const [overview, setOverview] = React.useState([]);
 
   React.useEffect(() => {
-    const resolveFeed = async () => {
-      const feedData = await getFeed();
-      const overviewData = await getOverview();
+    const resolveData = async () => {
+      const [feedData, overviewData] = await Promise.all([
+        getFeed(),
+        getOverview(),
+      ]);
       setFeed(feedData);
       setOverview(overviewData);
     };
-    resolveFeed();
+    resolveData();
   }, []);
 
   return (

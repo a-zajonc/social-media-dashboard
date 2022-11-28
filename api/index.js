@@ -1,9 +1,7 @@
 const express = require("express");
-// const cors = require("cors");
 const app = express();
 
 app.set("port", process.env.PORT || 8081);
-// app.use(cors());
 
 app.get("/api/feed", (req, res) => {
   res.json([
@@ -23,7 +21,7 @@ app.get("/api/feed", (req, res) => {
       vendor: "ig",
       handler: "@nathanf",
       amount: 11223,
-      ranking: 99,
+      ranking: 1099,
     },
     {
       vendor: "yt",
